@@ -24,5 +24,5 @@
             clientSecret:  ${{secrets.CLIENTSECRET}}
             subscriptionId: ${{secrets.SUBSCRIPTIONID}}
             tenantId: ${{secrets.TENANTID}}
-            DeleteArtifactsNotInTemplate: 'true'
+            DeleteArtifactsNotInTemplate: 'false'
             managedIdentity: 'False'
