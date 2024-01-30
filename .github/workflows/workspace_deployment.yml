@@ -17,8 +17,7 @@
             TargetWorkspaceName: 'synapse-test-cicd-target'
             TemplateFile: './synapse-cdcd-test/TemplateForWorkspace.json'
             ParametersFile: './synapse-cdcd-test/TemplateParametersForWorkspace.json'
-            OverrideArmParameters: '
-              -synapse-cdcd-test-WorkspaceDefaultStorage_properties_typeProperties_url https://gauravnegistoragemf.dfs.core.windows.net'
+            OverrideArmParameters: './github/workflows/overrideparameters.yaml'
 	    environment: 'Azure Public'
             resourceGroup: 'Amit'
             clientId: ${{secrets.CLIENTID}}
