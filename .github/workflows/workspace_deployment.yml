@@ -19,7 +19,7 @@
             ParametersFile: './synapse-cdcd-test/TemplateParametersForWorkspace.json'
             OverrideArmParameters: '
               -synapse-cdcd-test-WorkspaceDefaultStorage_properties_typeProperties_url https://gauravnegistoragemf.dfs.core.windows.net'
-		        environment: 'Azure Public'
+	    environment: 'Azure Public'
             resourceGroup: 'Amit'
             clientId: ${{secrets.CLIENTID}}
             clientSecret:  ${{secrets.CLIENTSECRET}}
