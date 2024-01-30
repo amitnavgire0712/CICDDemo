@@ -1,7 +1,8 @@
   name: Synapse workspace deployment
   on:
-    push:
-        branches: [workspace_publish ]
+    workflow_dispatch
+    #push:
+       # branches: [workspace_publish ]
   #uses: Azure/Synapse-workspace-deployment@V1.8.0
   jobs:
     release:
