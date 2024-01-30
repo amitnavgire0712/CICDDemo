@@ -1,0 +1,30 @@
+  name: Synapse workspace deployment
+  on:
+    workflow_dispatch
+    #push:
+       # branches: [workspace_publish ]
+  #uses: Azure/Synapse-workspace-deployment@V1.8.0
+  jobs:
+    release:
+        # You also can use the self-hosted runners.
+        runs-on: windows-latest
+        steps:
+        # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
+        - uses: actions/checkout@v2
+        #- uses: azure/synapse-workspace-deployment@release-1.0
+        - name: Synapse Workspace Deployment
+          uses: azure/synapse-workspace-deployment@V1.8.0
+          with:
+            TargetWorkspaceName: 'synapse-test-cicd-target'
+            TemplateFile: './synapse-cdcd-test/TemplateForWorkspace.json'
+            ParametersFile: './synapse-cdcd-test/TemplateParametersForWorkspace.json'
+            OverrideArmParameters: './overrideparameters.yaml'
+            environment: 'Azure Public'
+            resourceGroup: 'Amit'
+            clientId: ${{secrets.CLIENTID}}
+            clientSecret:  ${{secrets.CLIENTSECRET}}
+            subscriptionId: ${{secrets.SUBSCRIPTIONID}}
+            tenantId: ${{secrets.TENANTID}}
+            #DeleteArtifactsNotInTemplate: 'false'
+            managedIdentity: 'False'
+            operation: 'deploy'
