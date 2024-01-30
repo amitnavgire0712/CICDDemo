@@ -8,8 +8,14 @@
 		"synapse-cdcd-test-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapse-cdcd-test.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"synapse-cdcd-test-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://nitinlearnadls.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsstorageng.dfs.core.windows.net/"
 		}
 	}
 }
