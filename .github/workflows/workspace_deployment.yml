@@ -17,7 +17,7 @@
             TargetWorkspaceName: 'synapse-test-cicd-target'
             TemplateFile: './synapse-cdcd-test/TemplateForWorkspace.json'
             ParametersFile: './synapse-cdcd-test/TemplateParametersForWorkspace.json'
-            OverrideArmParameters: './github/workflows/overrideparameters.yaml'
+            OverrideArmParameters: './overrideparameters.yaml'
             environment: 'Azure Public'
             resourceGroup: 'Amit'
             clientId: ${{secrets.CLIENTID}}
